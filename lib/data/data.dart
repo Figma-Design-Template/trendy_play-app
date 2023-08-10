@@ -3,15 +3,16 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // ! Routing
 int currentIndex = 0;
+double tabRadisValue = 20;
 // ! Routing
 
 List bottomBar = [
   const Icon(
-    FontAwesomeIcons.home,
+    FontAwesomeIcons.compass,
     color: Colors.white,
   ),
   const Icon(
-    FontAwesomeIcons.discord,
+    FontAwesomeIcons.store,
     color: Colors.white,
   ),
   const Icon(

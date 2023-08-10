@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:trendy_play_app/data/data.dart';
 
@@ -33,13 +35,33 @@ class _RoutingState extends State<Routing> {
         body: Stack(alignment: Alignment.bottomCenter, children: [
       routing.elementAt(counterIndexModel.getIndex),
       Container(
-          margin: EdgeInsets.all(displayWidth * .05),
-          height: displayWidth * .155,
-          alignment: Alignment.center,
-          decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 80, 72, 131),
-              borderRadius: BorderRadius.all(Radius.circular(35))),
-          child: const ButtomBar())
+        margin: EdgeInsets.only(
+            left: displayWidth * .1,
+            right: displayWidth * .1,
+            bottom: displayWidth * .05),
+        height: displayWidth * .155,
+        alignment: Alignment.center,
+        decoration: const BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.black12,
+                  offset: Offset(0, -1),
+                  blurRadius: 8,
+                  spreadRadius: 4)
+            ],
+            color: Colors.black,
+            borderRadius: BorderRadius.all(Radius.circular(20))),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
+            blendMode: BlendMode.lighten,
+            child: _ButtonBarWidget(),
+          ),
+        ),
+      )
     ]));
   }
+
+  ButtomBar _ButtonBarWidget() => const ButtomBar();
 }

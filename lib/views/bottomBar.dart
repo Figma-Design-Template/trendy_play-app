@@ -21,8 +21,7 @@ class _ButtomBarState extends State<ButtomBar> {
       children: [
         ...List.generate(bottomBar.length, (i) {
           return GestureDetector(
-            onTap: () => setState(() =>
-                {print('i------> $i'), counterIndexModel.setCurrentIndex(i)}),
+            onTap: () => setState(() => {counterIndexModel.setCurrentIndex(i)}),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

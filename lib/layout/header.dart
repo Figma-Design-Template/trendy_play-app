@@ -13,17 +13,14 @@ class MySliverPersistentHeaderDelegate extends SliverPersistentHeaderDelegate {
       child: Row(
         children: [
           Container(
-            width: 100,
+            width: 94,
             height: 45,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(50),
             ),
-            child: const Text(
-              '32',
-              style: TextStyle(fontSize: 16),
-            ),
+            child: _DocIcon(),
           ),
           Expanded(
             child: Container(
@@ -33,13 +30,46 @@ class MySliverPersistentHeaderDelegate extends SliverPersistentHeaderDelegate {
           Container(
             padding: EdgeInsets.all(16),
             child: const Icon(
-              FontAwesomeIcons.search,
-              size: 20,
+              FontAwesomeIcons.solidBell,
+              size: 24,
             ),
           ),
         ],
       ),
     );
+  }
+
+  Row _DocIcon() {
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(8),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: const Offset(0, 1),
+                  ),
+                ]),
+            child: const Icon(
+              FontAwesomeIcons.dollarSign,
+              size: 20,
+            ),
+          ),
+          const Text(
+            '999',
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.normal),
+          )
+        ]);
   }
 
   @override
