@@ -41,16 +41,16 @@ class _RoutingState extends State<Routing> {
             bottom: displayWidth * .05),
         height: displayWidth * .155,
         alignment: Alignment.center,
-        decoration: const BoxDecoration(
-            boxShadow: [
+        decoration: BoxDecoration(
+            boxShadow: const [
               BoxShadow(
                   color: Colors.black12,
                   offset: Offset(0, -1),
                   blurRadius: 8,
                   spreadRadius: 4)
             ],
-            color: Colors.black,
-            borderRadius: BorderRadius.all(Radius.circular(20))),
+            color: Color.fromARGB(255, 49, 49, 49).withOpacity(0.7),
+            borderRadius: const BorderRadius.all(Radius.circular(30))),
         child: ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(20)),
           child: BackdropFilter(

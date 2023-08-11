@@ -15,7 +15,7 @@ class MySliverPersistentHeaderDelegate extends SliverPersistentHeaderDelegate {
           Container(
             width: 94,
             height: 45,
-            padding: EdgeInsets.all(4),
+            padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
               color: Colors.grey[200],
               borderRadius: BorderRadius.circular(50),
@@ -24,11 +24,11 @@ class MySliverPersistentHeaderDelegate extends SliverPersistentHeaderDelegate {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
             ),
           ),
           Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child: const Icon(
               FontAwesomeIcons.solidBell,
               size: 24,
