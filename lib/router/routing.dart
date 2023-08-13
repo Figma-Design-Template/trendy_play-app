@@ -50,9 +50,9 @@ class _RoutingState extends State<Routing> {
                   spreadRadius: 4)
             ],
             color: Color.fromARGB(255, 49, 49, 49).withOpacity(0.7),
-            borderRadius: const BorderRadius.all(Radius.circular(30))),
+            borderRadius: const BorderRadius.all(Radius.circular(40))),
         child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(20)),
+          borderRadius: const BorderRadius.all(Radius.circular(40)),
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 0, sigmaY: 0),
             blendMode: BlendMode.lighten,
