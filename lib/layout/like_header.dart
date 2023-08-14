@@ -10,40 +10,50 @@ class LikeSliverPersistentHeaderDelegate
     print('overlapsContent: $overlapsContent');
 
     return Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-        ),
-        padding: const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 0),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 45,
-                  padding: const EdgeInsets.all(4),
-                  child: const Text(
-                    'Like',
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  child: const Icon(
-                    FontAwesomeIcons.solidBell,
-                    size: 24,
-                  ),
-                ),
-              ],
+      decoration: const BoxDecoration(
+        color: Colors.white,
+      ),
+      padding: const EdgeInsets.only(top: 50, left: 20, right: 20, bottom: 0),
+      child: Row(
+        children: [
+          Container(
+            height: 45,
+            padding: const EdgeInsets.all(4),
+            child: _DocIcon(),
+          ),
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(16),
             ),
-            LikeSrach(shrinkOffset: shrinkOffset)
-            // Positioned(bottom: 0, child: LikeSrach())
-          ],
-        ));
+          ),
+          Container(
+            padding: const EdgeInsets.all(16),
+            child: const Icon(
+              FontAwesomeIcons.solidBell,
+              size: 24,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Row _DocIcon() {
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            child: const Text(
+              'Like',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ]);
   }
 
   @override
-  double get maxExtent => 200.0;
+  double get maxExtent => 120.0;
 
   @override
   double get minExtent => 110.0;

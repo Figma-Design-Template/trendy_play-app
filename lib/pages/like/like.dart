@@ -28,6 +28,9 @@ class _LikeWidgetState extends State<LikeWidget> {
       //     height: 10,
       //   ),
       // ),
+      const SliverToBoxAdapter(
+        child: LikeSrach(shrinkOffset: 0),
+      ),
       SliverPadding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         sliver: SliverGrid(
@@ -36,7 +39,7 @@ class _LikeWidgetState extends State<LikeWidget> {
             mainAxisSpacing: 15.0, // 纵轴间距
             crossAxisSpacing: 15.0, // 横轴间距
             childAspectRatio: 1.0, // 子项宽高比
-            mainAxisExtent: 240.0, // 纵轴方向上子项的最大高度
+            mainAxisExtent: 254.0, // 纵轴方向上子项的最大高度
           ),
           delegate: SliverChildBuilderDelegate(
             (BuildContext context, int index) {

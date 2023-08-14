@@ -14,7 +14,7 @@ class _LikeItemListState extends State<LikeItemList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 360,
+        margin: const EdgeInsets.only(top: 20),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           // color: Colors.grey[100],

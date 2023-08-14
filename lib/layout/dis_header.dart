@@ -50,10 +50,10 @@ class DisCoverSliverPersistentHeaderDelegate
   }
 
   @override
-  double get maxExtent => 110.0;
+  double get maxExtent => 120.0;
 
   @override
-  double get minExtent => 110.0;
+  double get minExtent => 100.0;
 
   @override
   bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
