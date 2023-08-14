@@ -1,13 +1,9 @@
 # trendy_play_app
 
-## Home
+## Home、Discover、Like
 
-![like](./assets/md/1.gif)
-
-## Discover
-
-![like](./assets/md/3.gif)
-
-## Like
-
-![like](./assets/md/image.png)
+<div style="display: flex;" >
+<img src="./assets/md/1.gif" alt="Alt Text" width="200" />
+<img src="./assets/md/3.gif" alt="Alt Text" width="200" style="margin: 0 15px" />
+<img src="./assets/md/image.png" alt="Alt Text" width="200" />
+</div>
